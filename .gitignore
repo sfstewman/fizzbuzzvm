@@ -1,4 +1,4 @@
 fizzbuzzvm
-
-fizzbuzzvm.dSYM:
-Contents
+fizzbuzzreg
+*.dSYM
+.DS_Store
