@@ -117,7 +117,9 @@ static unsigned short fizzbuzz[] = {
   PUSHIMM(0),           /* 30 */
   CJMP(-30),            /* 31 */
 
-  OP_STOP,              /* 32 */
+  PUSHIMM(0),           /* 32 */
+
+  /* STOP */
 };
 
 const char *strings[] = {
@@ -223,7 +225,7 @@ end:
 
 int main(void)
 {
-  return runvm(fizzbuzz, sizeof fizzbuzz, strings, sizeof strings);
+  return runvm(fizzbuzz, sizeof fizzbuzz / sizeof fizzbuzz[0], strings, sizeof strings / sizeof strings[0]);
 }
 
 
